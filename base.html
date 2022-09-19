@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ROCK PAPAER SCISSORS</title>
+</head>
+<body>
+    <div class="container">
+        <div class="option">
+            <div class="rock">
+                <img src="https://img.icons8.com/color/96/000000/hand-rock-skin-type-3.png"/>
+            </div>
+            <div class="paper">
+                <img src="https://img.icons8.com/color/96/000000/hand.png"/>
+            </div>
+            <div class="scissors">
+                <img src="https://img.icons8.com/color/96/000000/hand-scissors-skin-type-3.png"/>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function() {
+    const computer = ["Rock", "Paper", "Scissors"];
+    $(".rock").click(function(){
+        const random = Math.floor(Math.random() * computer.length);
+        if (random == "Rock"){
+            alert("Draw Computer Chooses "+computer[random])
+        }else if (random == "Paper"){
+            alert("Lost Computer Chooses "+computer[random])
+        }else {
+            alert("Wins Computer Chooses "+computer[random])
+        }
+    })
+    $(".paper").click(function(){
+        const random = Math.floor(Math.random() * computer.length);
+        if (random == "Rock"){
+            alert("Wins Computer Chooses "+computer[random])
+        }else if (random == "Paper"){
+            alert("Draw Computer Chooses "+computer[random])
+        }else {
+            alert("Lost Computer Chooses "+computer[random])
+        }
+    })
+    $(".scissors").click(function(){
+        const random = Math.floor(Math.random() * computer.length);
+        if (random == "Rock"){
+            alert("Lost Computer Chooses "+computer[random])
+        }else if (random == "Paper"){
+            alert("Wins Computer Chooses "+computer[random])
+        }else {
+            alert("Draw Wins Chooses "+computer[random])
+        }
+    })
+})
+</script>
+</html>
